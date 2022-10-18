@@ -51,7 +51,9 @@ export class AddScore extends React.Component {
       user: this.state.name,
       score: this.state.score,
     };
-    rycScores.push(dataToSend)
+    console.log(rycScores.find(obj => { if (obj.user === dataToSend.user) { return (obj.score = obj.score + dataToSend.score) }}))
+    console.log(rycScores)
+    //rycScores.push(dataToSend)
     this.displaySuccess();
     this.props.loadLeaderboard();
   };
