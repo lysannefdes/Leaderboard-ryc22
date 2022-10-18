@@ -59,7 +59,6 @@ export class AddScore extends React.Component {
   render() {
     return (
       <section className="add-score">
-        <h2 className="add-score__subtitle subtitle">Add your score</h2>
         <form
           action="/"
           className="add-score__form"
@@ -72,7 +71,7 @@ export class AddScore extends React.Component {
             className="add-score__name"
             placeholder="Your Name"
             autoComplete="off"
-            maxLength="10"
+            maxLength="100"
             required
             onChange={this.handleNameChange}
           />
