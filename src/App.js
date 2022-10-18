@@ -54,8 +54,8 @@ class App extends React.Component {
               loading={this.state.loading}
               loadLeaderboard={this.loadLeaderboard}
             />
-            <AddScore loadLeaderboard={this.loadLeaderboard} />
           </div>
+		  <AddScore loadLeaderboard={this.loadLeaderboard} />
         </main>
       </div>
     );
