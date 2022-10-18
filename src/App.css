@@ -23,7 +23,7 @@ body {
   background-image: url(./images/BG.png);
   background-repeat: no-repeat;
   background-position: top;
-  background-size: cover;
+  /*background-size: cover;*/
 }
 
 section {
@@ -62,7 +62,7 @@ input {
 .container, .add-score {
   width: 50%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 5rem auto;
 }
 
 .container--flex {
@@ -105,6 +105,7 @@ input {
   margin: 8rem 0;
   color:#fff;
   font-family: 'Adventure Subtitles','VCR OSD Mono','Montserrat', sans-serif;
+  text-shadow: 2px 2px #ff0000;
 }
 
 .subtitle {

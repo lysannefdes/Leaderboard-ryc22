@@ -9,7 +9,7 @@ export const Scoreboard = (props) => (
     )}
     {props.scores.map((score) => (
       <li className="scoreboard__item" key={score.id}>
-        {score.user}: {score.score}
+        <div classanme="username">{score.user}</div> <div classanme="score">{score.score}</div>
       </li>
     ))}
   </ul>

@@ -38,14 +38,6 @@ const rycScores = [
     {
       "user":"Saint Basil 3",
       "score":10
-    },
-    {
-      "user":"Saint Noam 4",
-      "score":15
-    },
-    {
-      "user":"Saint Kelvin 4",
-      "score":20
     }
   ]
 
