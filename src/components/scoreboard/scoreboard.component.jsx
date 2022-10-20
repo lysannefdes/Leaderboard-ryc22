@@ -1,5 +1,4 @@
 import React from 'react';
-
 import './scoreboard.styles.css';
 
 export const Scoreboard = (props) => (

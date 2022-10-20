@@ -5,10 +5,13 @@ import { rycScores } from '../../constants/global';
 
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import Loader from 'react-loader-spinner';
+import { useEffect } from 'react'
 
 import './board.styles.css';
 
 export class Board extends React.Component {
+  
+  
   render() {
     return (
       <div className="container container--flex">
@@ -22,4 +25,5 @@ export class Board extends React.Component {
       </div>
     );
   }
+
 }

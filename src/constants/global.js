@@ -1,4 +1,6 @@
+
 let rycScores = []
+
 
 if (localStorage.getItem("scores") === null) {
 
@@ -49,4 +51,5 @@ else {
   rycScores = JSON.parse(localStorage.getItem('scores')) || []
   console.log(rycScores)
 }
+
 export { rycScores }
