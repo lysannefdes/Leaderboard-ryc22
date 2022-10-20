@@ -73,6 +73,7 @@ class App extends React.Component {
     return (
       <Router>
         <div className="App">
+		<Header title="Leaderboard" />
           <Routes>
             <Route path='*' element={<Header title="Leaderboard" />}/>
             <Route exact path='/leaderboard-react' element={<Board title="scores"
