@@ -44,6 +44,8 @@ export class AddScore extends React.Component {
     });
   };
 
+
+
   handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -51,9 +53,18 @@ export class AddScore extends React.Component {
       user: this.state.name,
       score: this.state.score,
     };
-    console.log(rycScores.find(obj => { if (obj.user === dataToSend.user) { return (obj.score = obj.score + dataToSend.score) }}))
-    console.log(rycScores)
-    //rycScores.push(dataToSend)
+    
+    console.log(this.state.name)
+    const index = rycScores.map(object => object.user).indexOf(dataToSend.user);
+    console.log(index)
+    if(index >= 0 ){
+      rycScores[index].score += dataToSend.score
+    }
+    else {
+      rycScores.push(dataToSend)
+    }
+
+    localStorage.setItem('scores', JSON.stringify(rycScores))
     this.displaySuccess();
     this.props.loadLeaderboard();
   };
