@@ -65,6 +65,8 @@ export class AddScore extends React.Component {
     }
 
     localStorage.setItem('scores', JSON.stringify(rycScores))
+    window.dispatchEvent(new Event('storage'))
+    console.log(this.state)
     this.displaySuccess();
     this.props.loadLeaderboard();
   };

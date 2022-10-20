@@ -75,12 +75,12 @@ class App extends React.Component {
         <div className="App">
 		<Header title="Leaderboard" />
           <Routes>
-            <Route path='*' element={<Header title="Leaderboard" />}/>
+            <Route path='*' element={<Header title="Leaderboard" />} />
             <Route exact path='/leaderboard-react' element={<Board title="scores"
-                scores={this.state.scores}
-                loading={this.state.loading}
-                loadLeaderboard={this.loadLeaderboard}
-              />} />
+              scores={this.state.scores}
+              loading={this.state.loading}
+              loadLeaderboard={this.loadLeaderboard}
+            />} />
             <Route exact path='/add' element={<AddScore loadLeaderboard={this.loadLeaderboard} />}></Route>
           </Routes>
         </div>
