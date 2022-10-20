@@ -11,6 +11,7 @@ import './board.styles.css';
 export class Board extends React.Component {
   render() {
     return (
+      <div className="container container--flex">
       <section className="board">
         {this.props.loading ? (
           <Loader type="TailSpin" color="#3563be" height={50} width={50} />
@@ -18,6 +19,7 @@ export class Board extends React.Component {
           <Scoreboard scores={this.props.scores} />
         )}
       </section>
+      </div>
     );
   }
 }
