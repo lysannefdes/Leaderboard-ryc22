@@ -6,44 +6,52 @@ if (localStorage.getItem("scores") === null) {
 
   rycScores = [
     {
-      "user": "Saint Hanan",
-      "score": 5
+      "user": "Wolf Pack",
+      "score": 0
     },
     {
-      "user": "Saint Basil",
-      "score": 10
+      "user": "Raging Giants",
+      "score": 0
     },
     {
-      "user": "Saint Noam",
-      "score": 15
+      "user": "The Alphas",
+      "score": 0
     },
     {
-      "user": "Saint Kelvin",
-      "score": 20
+      "user": "Battle Hawks",
+      "score": 0
     },
     {
-      "user": "Ingrid",
-      "score": 2
+      "user": "Guardians of the Faith",
+      "score": 0
     },
     {
-      "user": "Saint Basil 2",
-      "score": 10
+      "user": "Teen Titans",
+      "score": 0
     },
     {
-      "user": "Saint Noam 2",
-      "score": 15
+      "user": "Kingpins",
+      "score": 0
     },
     {
-      "user": "Saint Kelvin 2",
-      "score": 20
+      "user": "Agents of Hope",
+      "score": 0
     },
     {
-      "user": "Ingrid * 2",
-      "score": 2
+      "user": "Living Legends",
+      "score": 0
     },
     {
-      "user": "Saint Basil 3",
-      "score": 10
+      "user": "Crusaders",
+      "score": 0
+    },
+    {
+      "user": "Fishers of Men",
+      "score": 0
+    },
+    {
+      "user": "The Watchmen",
+      "score": 0
     }
   ]
 }
