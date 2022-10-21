@@ -35,6 +35,7 @@ class App extends React.Component {
         .map((score) => ({
           user: score.user,
           score: score.score,
+          image: score.image,
           id: uuidv4(),
         }))
         .sort((score1, score2) => score2.score - score1.score),
