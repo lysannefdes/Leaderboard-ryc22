@@ -6,11 +6,15 @@
 .scoreboard__item {
   font-size: 1.25rem;
   font-weight: 700;
-  padding: 1rem 2rem;
+  padding: 0.45rem 2rem;
   display: flex;
   justify-content: space-between;
   position: relative;
   text-transform:uppercase;
+}
+
+.scoreboard__item div{
+	margin:auto 0;
 }
 
 .scoreboard__item .username, .scoreboard__item .score{
