@@ -5,64 +5,64 @@ if (localStorage.getItem("scores") === null) {
 
   rycScores = [
     {
-      "user": "Wolf Pack",
+      "user": "WOLF PACK",
       "score": 0,
-      "image": "/assets/wolfpack.jpg"
+      "image": "/assets/Wolfpack.png"
     },
     {
-      "user": "Raging Giants",
+      "user": "RAGING GIANTS",
       "score": 0,
-      "image": "/assets/giants.png"
+      "image": "/assets/RagingGiants.png"
     },
     {
-      "user": "The Alphas",
+      "user": "THE ALPHAS",
       "score": 0,
-      "image": "/assets/alpha.jpg"
+      "image": "/assets/alphas.png"
     },
     {
-      "user": "Battle Hawks",
+      "user": "BATTLE HAWKS",
       "score": 0,
-      "image": "/assets/battlehawks.png"
+      "image": "/assets/HAWKS.png"
     },
     {
-      "user": "Guardians of the Faith",
+      "user": "GUARDIANS OF THE FAITH",
       "score": 0,
-      "image": "/assets/guardiansoffaith.png"
+      "image": "/assets/GTF.png"
     },
     {
-      "user": "Teen Titans",
+      "user": "TEEN TITANS",
       "score": 0,
-      "image": "/assets/teentitans.png"
+      "image": "/assets/teenTitans.png"
     },
     {
-      "user": "Kingpins",
+      "user": "KINGPINS",
       "score": 0,
-      "image": "/assets/kingpins.jpg"
+      "image": "/assets/KingPins.png"
     },
     {
-      "user": "Agents of Hope",
+      "user": "AGENTS OF HOPE",
       "score": 0,
-      "image": "/assets/hope.jpg"
+      "image": "/assets/agentsOfHope.png"
     },
     {
-      "user": "Living Legends",
+      "user": "LIVING LEGENDS",
       "score": 0,
-      "image": "/assets/livinglegends.jpg"
+      "image": "/assets/LivingLegends.png"
     },
     {
-      "user": "Crusaders",
+      "user": "CRUSADERS",
       "score": 0,
-      "image": "/assets/crusaders.jpg"
+      "image": "/assets/crusaders.png"
     },
     {
-      "user": "Fishers of Men",
+      "user": "FISHERS OF MEN",
       "score": 0,
-      "image": "/assets/fishermen.jpg"
+      "image": "/assets/fishersOfMen.png"
     },
     {
-      "user": "The Watchmen",
+      "user": "THE WATCHMEN",
       "score": 0,
-      "image": "/assets/watchmen.jpg"
+      "image": "/assets/TheWatchMen.png"
     }
   ]
 }
