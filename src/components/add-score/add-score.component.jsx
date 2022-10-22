@@ -50,14 +50,12 @@ export class AddScore extends React.Component {
     e.preventDefault();
 
     const dataToSend = {
-      user: this.state.name,
+      user: this.state.name.toUpperCase(),
       score: this.state.score,
       image: this.state.image
     };
-    console.log(this.props)
-    console.log(this.props.scores)
-    const index = this.props.scores.map(object => object.user).indexOf(dataToSend.user);
-    console.log(index)
+    const index = this.props.scores.map(object => object.user).indexOf(dataToSend.user.toUpperCase());
+
     if(index >= 0 ){
       this.props.scores[index].score += dataToSend.score
     }
@@ -67,7 +65,6 @@ export class AddScore extends React.Component {
 
     localStorage.setItem('scores', JSON.stringify(this.props.scores))
     window.dispatchEvent(new Event('storage'))
-    console.log(this.state)
     this.displaySuccess();
     this.props.loadLeaderboard();
   };
