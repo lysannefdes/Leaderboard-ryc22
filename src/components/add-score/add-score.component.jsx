@@ -1,16 +1,16 @@
 import React from 'react';
 
 import './add-score.styles.css';
-import { rycScores } from '../../constants/global';
 import { baseURL, gameID } from '../../config';
 
 export class AddScore extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       name: '',
       score: '',
+      image: '',
       displaySuccess: false,
       displayError: false,
     };
@@ -52,19 +52,20 @@ export class AddScore extends React.Component {
     const dataToSend = {
       user: this.state.name,
       score: this.state.score,
+      image: this.state.image
     };
-    
-    console.log(this.state.name)
-    const index = rycScores.map(object => object.user).indexOf(dataToSend.user);
+    console.log(this.props)
+    console.log(this.props.scores)
+    const index = this.props.scores.map(object => object.user).indexOf(dataToSend.user);
     console.log(index)
     if(index >= 0 ){
-      rycScores[index].score += dataToSend.score
+      this.props.scores[index].score += dataToSend.score
     }
     else {
-      rycScores.push(dataToSend)
+      this.props.scores.push(dataToSend)
     }
 
-    localStorage.setItem('scores', JSON.stringify(rycScores))
+    localStorage.setItem('scores', JSON.stringify(this.props.scores))
     window.dispatchEvent(new Event('storage'))
     console.log(this.state)
     this.displaySuccess();

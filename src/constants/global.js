@@ -1,9 +1,7 @@
 
-let rycScores = []
+let rycDefaultScores = []
 
-if (localStorage.getItem("scores") === null) {
-
-  rycScores = [
+  rycDefaultScores = [
     {
       "user": "WOLF PACK",
       "score": 0,
@@ -65,10 +63,4 @@ if (localStorage.getItem("scores") === null) {
       "image": "/assets/TheWatchMen.png"
     }
   ]
-}
-else {
-  rycScores = JSON.parse(localStorage.getItem('scores')) || []
-  console.log(rycScores)
-}
-
-export { rycScores }
+export { rycDefaultScores }

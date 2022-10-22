@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Scoreboard } from '../scoreboard/scoreboard.component';
-import { rycScores } from '../../constants/global';
+
 
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import Loader from 'react-loader-spinner';

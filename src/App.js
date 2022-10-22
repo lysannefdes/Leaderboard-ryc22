@@ -3,7 +3,7 @@ import './App.css';
 import { Header } from './components/header/header.component';
 import { Board } from './components/board/board.component';
 import { AddScore } from './components/add-score/add-score.component';
-import { rycScores } from './constants/global';
+import { rycDefaultScores } from './constants/global';
 import {
   BrowserRouter as Router,
   Routes,
@@ -29,9 +29,10 @@ class App extends React.Component {
 
     //const response = [{"result":[{"user":"asdasd","score":99},{"user":"kim kardas","score":23},{"user":"Ye","score":24},{"score":100,"user":"Sam"},{"user":"Terry","score":99},{"user":"drizzy","score":6},{"score":13,"user":"ayam"},{"score":27,"user":"Tom"}]}]
     //const { result: scores } = await response.json();
-
+    this.state.scores = JSON.parse(localStorage.getItem('scores')) || rycDefaultScores
+    console.log(this.state.scores)
     this.setState({
-      scores: rycScores
+      scores: this.state.scores
         .map((score) => ({
           user: score.user,
           score: score.score,
@@ -46,29 +47,10 @@ class App extends React.Component {
 
   componentDidMount() {
     this.loadLeaderboard();
+    window.addEventListener('storage', () => {
+      this.loadLeaderboard()
+    });
   }
-
-  //   render() {
-  //     return (
-  //       <div className="App">
-  //         <Header title="Leaderboard" />
-  //         <main>
-  //           <div className="container container--flex">
-  //             <Board
-  //   title="scores"
-  //   scores={this.state.scores}
-  //   loading={this.state.loading}
-  //   loadLeaderboard={this.loadLeaderboard}
-  // />
-  //           </div>
-
-  //         </main>
-  //       </div>
-  //     );
-
-  //   }
-  // }
-
 
   render() {
     return (
@@ -82,7 +64,7 @@ class App extends React.Component {
               loading={this.state.loading}
               loadLeaderboard={this.loadLeaderboard}
             />} />
-            <Route exact path='/add' element={<AddScore loadLeaderboard={this.loadLeaderboard} />}></Route>
+            <Route exact path='/add' element={<AddScore scores={this.state.scores} loadLeaderboard={this.loadLeaderboard} />}></Route>
           </Routes>
         </div>
       </Router>
